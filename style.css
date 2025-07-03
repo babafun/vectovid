@@ -1,0 +1,149 @@
+/* === Global Reset & Fonts === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #eeeeee;
+  padding: 40px;
+  text-align: center;
+  /* Parallax background layers */
+  background:
+    linear-gradient(120deg, #000014 0%, #001a33 100%) fixed,
+    repeating-linear-gradient(160deg, #001a33 0 2px, transparent 2px 40px) fixed,
+    repeating-linear-gradient(200deg, #000014 0 1px, transparent 1px 60px) fixed;
+  background-size:
+    100% 100%,
+    200% 200%,
+    300% 300%;
+  animation: parallax-bg 30s linear infinite;
+}
+
+/* Parallax animation */
+@keyframes parallax-bg {
+  0% {
+    background-position:
+      0% 0%,
+      0% 0%,
+      0% 0%;
+  }
+  100% {
+    background-position:
+      0% 0%,
+      100% 100%,
+      200% 200%;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #00c2ff;
+}
+
+/* === Section Styling === */
+.section {
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 500px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #bbbbbb;
+}
+
+input[type="file"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background-color: #222;
+  color: white;
+}
+
+button {
+  font-family: -apple-system, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #00c2ff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #00e3ff;
+}
+
+/* === Player Specific === */
+#svgContainer {
+  width: 400px;
+  height: 300px;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#audio {
+  margin-top: 10px;
+}
+
+#controls {
+  margin-top: 10px;
+}
+
+#status,
+#playerStatus {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #888;
+}
+a {
+    color: #00c2ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    border-bottom: 2px solid transparent;
+    padding: 2px 2px 0 2px;
+}
+
+a:hover, a:focus {
+    color: #ff9800;
+    border-bottom: 2px solid #ff9800;
+}
+
+a:active {
+    color: #ff9800;
+}
+
+a:visited {
+    color: #d6b4fc;
+}
+
+#svgContainer {
+  background-color: #333;
+}
+
+ input[type="file"] {
+    background-color: #222;
+    color: #eee;
+    border: 1px solid #555;
+}

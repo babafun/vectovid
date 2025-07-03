@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vector Video Format Experiment</title>
+  <meta charset="UTF-8">
+  <title>VVF Packer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to the Vector Video Format Experiment</h1>
-    <p>This is a simple HTML document to test the vector video format.</p>
+  <h1>🎞️ VVF Packer</h1>
+
+  <div class="section">
+    <label for="fps">FPS:</label>
+    <input type="number" id="fps" value="12" min="1">
+  </div>
+
+  <div class="section">
+    <label for="svgInput">Upload SVG frames:</label>
+    <input type="file" id="svgInput" accept=".svg" multiple>
+  </div>
+
+  <div class="section">
+    <label for="audioInput">Optional audio file:</label>
+    <input type="file" id="audioInput" accept="audio/*">
+  </div>
+
+  <div class="section">
+    <button onclick="createVVF()">🎁 Export .vvf</button>
+  </div>
+
+  <p id="vvfStatus"></p>
+
+  <script src="jszip.min.js"></script>
+  <script src="packer.js"></script>
 </body>
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VVF Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>▶️ VVF Player</h1>
+
+  <div class="section">
+    <label for="vvfInput">Upload a .vvf file:</label>
+    <input type="file" id="vvfInput" accept=".vvf,.zip">
+  </div>
+
+  <div class="section">
+    <div id="svgContainer">Your video will appear here.</div>
+    <audio id="audio" controls hidden></audio>
+    <div id="controls">
+      <button onclick="playVVF()">▶️ Play</button>
+      <button onclick="pauseVVF()">⏸️ Pause</button>
+    </div>
+  </div>
+
+  <p id="vvfStatus"></p>
+
+  <script src="jszip.min.js"></script>
+  <script src="player.js"></script>
+</body>
+</html>
