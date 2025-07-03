@@ -36,6 +36,7 @@ yarn.lock
 *.dbmdl
 *.bak
 *.log
+.vscode/
 
 # macOS
 .AppleDouble
