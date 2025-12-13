@@ -22,5 +22,4 @@ allow-single-char-lifetime = false
 # Enforce explicit derives and trait implementations
 allow-private-module-prefix = false
 
-# Tab configuration (hard tabs, 2 spaces wide)
-tab-spaces = 2
+

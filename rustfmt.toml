@@ -1,0 +1,6 @@
+hard_tabs = true
+group_imports = "StdExternalCrate"
+reorder_imports = true
+reorder_modules = true
+imports_granularity = "Crate"
+struct_field_align_threshold = 20
