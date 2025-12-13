@@ -1,0 +1,3 @@
+/workspaces/vectovid/build/CMakeFiles/vectovid_core.dir
+/workspaces/vectovid/build/CMakeFiles/edit_cache.dir
+/workspaces/vectovid/build/CMakeFiles/rebuild_cache.dir

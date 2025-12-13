@@ -1,0 +1,44 @@
+name: Build Web (WASM)
+
+on:
+  workflow_dispatch: {}
+  workflow_call: {}
+
+jobs:
+  build-web:
+    name: Build core (WASM)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+          override: true
+
+      - name: Add wasm target
+        run: rustup target add wasm32-unknown-unknown
+
+      - name: Install wasm-pack
+        run: cargo install wasm-pack --locked || true
+
+      - name: Cache Cargo
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-wasm-${{ hashFiles('**/Cargo.lock') }}
+
+      - name: Build core (wasm-pack)
+        working-directory: core
+        run: wasm-pack build --target web --out-dir pkg --release
+
+      - name: Upload core/pkg artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: core-pkg-wasm
+          path: core/pkg/

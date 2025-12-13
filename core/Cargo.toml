@@ -1,0 +1,23 @@
+[package]
+name = "vvf"
+version = "0.1.0"
+edition = "2021"
+authors = ["vectovid contributors"]
+license = "MIT"
+repository = "https://github.com/babafun/vectovid"
+homepage = "https://github.com/babafun/vectovid"
+documentation = "https://docs.rs/vvf"
+description = "Vector Video Format (VVF) - pack and play SVG-based video archives."
+keywords = ["video", "svg", "format", "wasm"]
+categories = ["multimedia::video"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde-wasm-bindgen = "0.6"
+zip = "0.6"
+js-sys = "0.3"
