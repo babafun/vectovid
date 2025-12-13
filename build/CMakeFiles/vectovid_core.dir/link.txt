@@ -1,2 +1,0 @@
-/usr/bin/ar qc libvectovid_core.a CMakeFiles/vectovid_core.dir/src/core.cpp.o
-/usr/bin/ranlib libvectovid_core.a

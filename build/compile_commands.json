@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/workspaces/vectovid/build",
-  "command": "/usr/bin/g++  -I/workspaces/vectovid/native/cpp/include -g -o CMakeFiles/vectovid_core.dir/src/core.cpp.o -c /workspaces/vectovid/native/cpp/src/core.cpp",
-  "file": "/workspaces/vectovid/native/cpp/src/core.cpp",
-  "output": "CMakeFiles/vectovid_core.dir/src/core.cpp.o"
-}
-]

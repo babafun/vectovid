@@ -9,7 +9,7 @@ jobs:
     name: Build desktop (Linux)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Setup Rust
         uses: actions-rs/toolchain@v1
@@ -30,8 +30,13 @@ jobs:
       - name: Build desktop
         run: cargo build -p vectovid_desktop --release
 
+      - name: Prepare bin directory
+        run: |
+          mkdir -p bin/linux
+          cp target/release/vectovid_desktop bin/linux/
+
       - name: Upload binary
         uses: actions/upload-artifact@v4
         with:
           name: vectovid_desktop-linux
-          path: target/release/vectovid_desktop
+          path: bin/linux/
