@@ -15,11 +15,3 @@ allow-dbg-in-tests = true
 
 # Cognitive complexity threshold
 cognitive-complexity-threshold = 30
-
-# Single-char lifetime names are often unclear
-allow-single-char-lifetime = false
-
-# Enforce explicit derives and trait implementations
-allow-private-module-prefix = false
-
-
