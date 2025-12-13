@@ -1,0 +1,26 @@
+# Clippy configuration for strict code quality standards
+
+# Documentation lints
+missing-docs-in-crate-items = true
+
+# Deny unsafe patterns
+allow-expect-in-tests = false
+allow-unwrap-in-tests = false
+
+# Enforce good error handling
+too-many-arguments-threshold = 7
+
+# Disallow debug utilities in production code
+allow-dbg-in-tests = true
+
+# Cognitive complexity threshold
+cognitive-complexity-threshold = 30
+
+# Single-char lifetime names are often unclear
+allow-single-char-lifetime = false
+
+# Enforce explicit derives and trait implementations
+allow-private-module-prefix = false
+
+# Tab configuration (hard tabs, 2 spaces wide)
+tab-spaces = 2
